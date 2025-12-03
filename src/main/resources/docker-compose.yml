@@ -16,7 +16,7 @@ services:
       KAFKA_BROKERCONNECT: kafka:29092
 
   zookeeper:
-    image: confluentinc/cp-zookeeper:latest
+    image: confluentinc/cp-zookeeper:7.5.1
     container_name: zookeeper
     ports:
       - 2181:2181
@@ -42,7 +42,7 @@ services:
     # See https://rmoff.net/2018/08/02/kafka-listeners-explained/ for details
     # "`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-
     #
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:7.5.1
     container_name: kafka
     depends_on:
       - zookeeper
